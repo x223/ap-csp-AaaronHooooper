@@ -1,0 +1,31 @@
+var x = 1;
+var y = 2;
+var xposition = 1;
+var yposition = 1;
+
+function setup() { 
+  createCanvas(windowWidth, windowHeight);
+} 
+
+function draw() { 
+  x = x + 1 * xposition;
+	y = y + random(14) * yposition;
+	
+	background(220);
+	ellipse(x,y,100,100);
+if (mouseX > windowWidth/2){
+fill(189,20,210);
+}	
+	else {
+	fill(19,55,250);
+	}
+
+	if(x >= windowWidth || x <= 0 ){
+	xposition = xposition * -1;
+	}
+	
+	if(y >= windowHeight || y <= 0){
+	yposition = yposition * -1;
+	}
+	
+}
